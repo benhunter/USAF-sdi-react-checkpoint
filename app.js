@@ -25,7 +25,7 @@ app.post('/send',function(req,res){
     let result;
     const emailSender = req.body;
     if(emailSender.sender && emailSender.recipient && emailSender.subject && emailSender.message){
-        emails.push({ sender: emailSender.sender, recipient: emailSender.recipient, subject: emailSender.subject, email: emailSender.message, })
+        emails.push({ sender: emailSender.sender, recipient: emailSender.recipient, subject: emailSender.subject, message: emailSender.message, })
 
         result = {
             "status": "success",
