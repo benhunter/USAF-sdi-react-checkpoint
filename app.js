@@ -1,10 +1,11 @@
 const fs = require('fs');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const express = require('express');
 const app = express();
 const port = 3001;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 const emails = JSON.parse(fs.readFileSync('emails.JSON'));
