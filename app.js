@@ -35,6 +35,8 @@ app.post('/send', function (req, res) {
       recipient: emailSender.recipient,
       subject: emailSender.subject,
       message: emailSender.message,
+      date: new Date(),
+      id: emails[emails.length - 1].id + 1,
     });
 
     result = {
