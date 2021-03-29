@@ -31,9 +31,9 @@ e.g. `/emails/1`:
     }
 ```
 
-GET `/search`:
+GET `/search` with URI query:
 
-e.g. `/search/meeting`:
+e.g. `/search?query=meeting`:
 
 ```
     {
