@@ -56,3 +56,29 @@ POST `/send`:
     "date": Date,
     "id": Number
   }
+```
+
+  # Resources:
+
+  ## Command: curl
+
+ The command `curl` stands for `client url`, and is a command that can be used to hit and endpoint.  For example - to hit the main google page:
+ 
+ ```
+ curl http://www.google.com
+ ```
+
+Below is an example of a POST call to the email endpoint:
+  ```
+   curl -d '{"sender": "string","recipient": "string","subject":"string","message": "string","date": "04/11/1982","id": 4001}' -H 'Content-Type: application/json' localhost:3001/send
+```
+
+Here is a summary of the arguments: 
+1. `-d` is shorthand for `--data`, and can represent the json you are POSTing to the API in the body.
+1. `-H` flag allows you to specify the content-type being sent in the body.  In our case that would be `'Content-Type: application/json'`.
+1. The final argument is the url you are trying to hit: `localhost:3001/send`
+
+...and you should see a response like this:
+```
+{"status":"success","message":"The message was successfully sent"}
+```
